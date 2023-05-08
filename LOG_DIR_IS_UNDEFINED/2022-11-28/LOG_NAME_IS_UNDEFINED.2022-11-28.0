@@ -1,0 +1,768 @@
+[2022-11-28 15:49:55] [main] INFO  com.cloud.survey.SurveyApplication - Starting SurveyApplication using Java 17.0.5 on oyeongjuui-MacBookAir.local with PID 5018 (/Users/youngjoooh/Desktop/GitHub/kakao_project/survey/target/classes started by youngjoooh in /Users/youngjoooh/Desktop/GitHub/kakao_project/survey)
+[2022-11-28 15:49:55] [main] INFO  com.cloud.survey.SurveyApplication - No active profile set, falling back to 1 default profile: "default"
+[2022-11-28 15:49:55] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-11-28 15:49:56] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 75 ms. Found 5 JPA repository interfaces.
+[2022-11-28 15:49:56] [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=4d1d9ac9-f163-30c0-8de1-e1889e744ed8
+[2022-11-28 15:49:56] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8083 (http)
+[2022-11-28 15:49:56] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8083"]
+[2022-11-28 15:49:56] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2022-11-28 15:49:56] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+[2022-11-28 15:49:56] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2022-11-28 15:49:56] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 965 ms
+[2022-11-28 15:49:56] [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-11-28 15:49:56] [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
+[2022-11-28 15:49:56] [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-11-28 15:49:56] [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2022-11-28 15:49:56] [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2022-11-28 15:49:56] [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+[2022-11-28 15:49:57] [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-11-28 15:49:57] [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-11-28 15:49:57] [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-11-28 15:49:57] [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5ab70df7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6764201e, org.springframework.security.web.context.SecurityContextPersistenceFilter@350ede1, org.springframework.security.web.header.HeaderWriterFilter@5f5076f9, org.springframework.security.web.authentication.logout.LogoutFilter@1ae26c59, org.springframework.security.oauth2.server.resource.web.BearerTokenAuthenticationFilter@2fb24ad8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65852d05, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54a5eff, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a3d52a0, org.springframework.security.web.session.SessionManagementFilter@47596e9, org.springframework.security.web.access.ExceptionTranslationFilter@77902ed6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@52f71d2]
+[2022-11-28 15:49:58] [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+[2022-11-28 15:49:58] [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[2022-11-28 15:49:58] [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+[2022-11-28 15:49:58] [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+[2022-11-28 15:49:58] [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 15:49:58] [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+[2022-11-28 15:49:58] [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+[2022-11-28 15:49:58] [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+[2022-11-28 15:49:58] [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+[2022-11-28 15:49:58] [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+[2022-11-28 15:49:58] [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+[2022-11-28 15:49:58] [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+[2022-11-28 15:49:58] [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+[2022-11-28 15:49:58] [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+[2022-11-28 15:49:58] [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+[2022-11-28 15:49:58] [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1669618198448 with initial instances count: 3
+[2022-11-28 15:49:58] [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application SURVEY-SERVICE with eureka with status UP
+[2022-11-28 15:49:58] [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1669618198450, current=UP, previous=STARTING]
+[2022-11-28 15:49:58] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:39c5dd892d510121ea27f17433149ac9: registering service...
+[2022-11-28 15:49:58] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8083"]
+[2022-11-28 15:49:58] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8083 (http) with context path ''
+[2022-11-28 15:49:58] [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8083
+[2022-11-28 15:49:58] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:39c5dd892d510121ea27f17433149ac9 - registration status: 204
+[2022-11-28 15:49:58] [main] INFO  com.cloud.survey.SurveyApplication - Started SurveyApplication in 3.35 seconds (JVM running for 3.685)
+[2022-11-28 15:50:38] [http-nio-8083-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-11-28 15:50:38] [http-nio-8083-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2022-11-28 15:50:38] [http-nio-8083-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+[2022-11-28 15:54:58] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 15:59:58] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 16:04:58] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 16:09:58] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 16:14:58] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 16:17:32] [http-nio-8083-exec-3] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+[2022-11-28 16:17:32] [http-nio-8083-exec-3] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+[2022-11-28 16:17:32] [http-nio-8083-exec-3] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.1.2
+[2022-11-28 16:17:32] [http-nio-8083-exec-3] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f8c67dc3ae0a3265
+[2022-11-28 16:17:32] [http-nio-8083-exec-3] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1669619852081
+[2022-11-28 16:17:32] [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition ANSWER_ANALYSIS-0 to 0 since the associated topicId changed from null to yfErt6RRTUqPC_MEY0CI1A
+[2022-11-28 16:17:32] [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: BuErQl3jTnmhWYW0yQb2qQ
+[2022-11-28 16:17:32] [kafka-producer-network-thread | producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 0 with epoch 0
+[2022-11-28 16:19:58] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 16:24:58] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 16:27:02] [kafka-producer-network-thread | producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
+[2022-11-28 16:29:58] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 16:34:58] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 16:39:58] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 16:44:58] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 16:49:58] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 16:54:58] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 16:59:58] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 17:01:05] [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application SURVEY-SERVICE with eureka with status DOWN
+[2022-11-28 17:01:05] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1669622465880, current=DOWN, previous=UP]
+[2022-11-28 17:01:05] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:39c5dd892d510121ea27f17433149ac9: registering service...
+[2022-11-28 17:01:05] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:39c5dd892d510121ea27f17433149ac9 - registration status: 204
+[2022-11-28 17:01:05] [SpringApplicationShutdownHook] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+[2022-11-28 17:01:05] [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+[2022-11-28 17:01:05] [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2022-11-28 17:01:05] [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+[2022-11-28 17:01:05] [SpringApplicationShutdownHook] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+[2022-11-28 17:01:05] [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-11-28 17:01:05] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2022-11-28 17:01:05] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2022-11-28 17:01:05] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+[2022-11-28 17:01:09] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+[2022-11-28 17:01:09] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:39c5dd892d510121ea27f17433149ac9 - deregister  status: 200
+[2022-11-28 17:01:09] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+[2022-11-28 17:01:12] [main] INFO  com.cloud.survey.SurveyApplication - Starting SurveyApplication using Java 17.0.5 on oyeongjuui-MacBookAir.local with PID 7137 (/Users/youngjoooh/Desktop/GitHub/kakao_project/survey/target/classes started by youngjoooh in /Users/youngjoooh/Desktop/GitHub/kakao_project/survey)
+[2022-11-28 17:01:12] [main] INFO  com.cloud.survey.SurveyApplication - No active profile set, falling back to 1 default profile: "default"
+[2022-11-28 17:01:13] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-11-28 17:01:13] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 80 ms. Found 5 JPA repository interfaces.
+[2022-11-28 17:01:13] [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=4d1d9ac9-f163-30c0-8de1-e1889e744ed8
+[2022-11-28 17:01:13] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8083 (http)
+[2022-11-28 17:01:13] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8083"]
+[2022-11-28 17:01:13] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2022-11-28 17:01:13] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+[2022-11-28 17:01:13] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2022-11-28 17:01:13] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1241 ms
+[2022-11-28 17:01:13] [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-11-28 17:01:13] [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
+[2022-11-28 17:01:14] [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-11-28 17:01:14] [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2022-11-28 17:01:14] [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2022-11-28 17:01:14] [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+[2022-11-28 17:01:14] [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-11-28 17:01:14] [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-11-28 17:01:14] [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-11-28 17:01:15] [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6f9e6a85, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e17a9e6, org.springframework.security.web.context.SecurityContextPersistenceFilter@64096a41, org.springframework.security.web.header.HeaderWriterFilter@31dbca5d, org.springframework.security.web.authentication.logout.LogoutFilter@43fdef43, org.springframework.security.oauth2.server.resource.web.BearerTokenAuthenticationFilter@162a5c4c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f6352a3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77262e71, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a1b4854, org.springframework.security.web.session.SessionManagementFilter@1f591b2e, org.springframework.security.web.access.ExceptionTranslationFilter@1a598e30, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4e23ddf0]
+[2022-11-28 17:01:15] [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+[2022-11-28 17:01:15] [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[2022-11-28 17:01:15] [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+[2022-11-28 17:01:15] [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+[2022-11-28 17:01:15] [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 17:01:15] [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+[2022-11-28 17:01:15] [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+[2022-11-28 17:01:15] [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+[2022-11-28 17:01:15] [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+[2022-11-28 17:01:15] [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+[2022-11-28 17:01:15] [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+[2022-11-28 17:01:15] [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+[2022-11-28 17:01:15] [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+[2022-11-28 17:01:15] [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+[2022-11-28 17:01:15] [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+[2022-11-28 17:01:15] [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1669622475773 with initial instances count: 5
+[2022-11-28 17:01:15] [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application SURVEY-SERVICE with eureka with status UP
+[2022-11-28 17:01:15] [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1669622475775, current=UP, previous=STARTING]
+[2022-11-28 17:01:15] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:e88b42e47a275b18a9c2d1d5a5f89838: registering service...
+[2022-11-28 17:01:15] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8083"]
+[2022-11-28 17:01:15] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8083 (http) with context path ''
+[2022-11-28 17:01:15] [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8083
+[2022-11-28 17:01:15] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:e88b42e47a275b18a9c2d1d5a5f89838 - registration status: 204
+[2022-11-28 17:01:15] [main] INFO  com.cloud.survey.SurveyApplication - Started SurveyApplication in 3.813 seconds (JVM running for 4.218)
+[2022-11-28 17:01:17] [http-nio-8083-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-11-28 17:01:17] [http-nio-8083-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2022-11-28 17:01:17] [http-nio-8083-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+[2022-11-28 17:01:31] [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application SURVEY-SERVICE with eureka with status DOWN
+[2022-11-28 17:01:31] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1669622491536, current=DOWN, previous=UP]
+[2022-11-28 17:01:31] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:e88b42e47a275b18a9c2d1d5a5f89838: registering service...
+[2022-11-28 17:01:31] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:e88b42e47a275b18a9c2d1d5a5f89838 - registration status: 204
+[2022-11-28 17:01:31] [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-11-28 17:01:31] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2022-11-28 17:01:31] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2022-11-28 17:01:31] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+[2022-11-28 17:01:34] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+[2022-11-28 17:01:34] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:e88b42e47a275b18a9c2d1d5a5f89838 - deregister  status: 200
+[2022-11-28 17:01:34] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+[2022-11-28 17:01:36] [main] INFO  com.cloud.survey.SurveyApplication - Starting SurveyApplication using Java 17.0.5 on oyeongjuui-MacBookAir.local with PID 7149 (/Users/youngjoooh/Desktop/GitHub/kakao_project/survey/target/classes started by youngjoooh in /Users/youngjoooh/Desktop/GitHub/kakao_project/survey)
+[2022-11-28 17:01:36] [main] INFO  com.cloud.survey.SurveyApplication - No active profile set, falling back to 1 default profile: "default"
+[2022-11-28 17:01:36] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-11-28 17:01:36] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 5 JPA repository interfaces.
+[2022-11-28 17:01:36] [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=4d1d9ac9-f163-30c0-8de1-e1889e744ed8
+[2022-11-28 17:01:37] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8083 (http)
+[2022-11-28 17:01:37] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8083"]
+[2022-11-28 17:01:37] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2022-11-28 17:01:37] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+[2022-11-28 17:01:37] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2022-11-28 17:01:37] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1319 ms
+[2022-11-28 17:01:37] [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-11-28 17:01:37] [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
+[2022-11-28 17:01:37] [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-11-28 17:01:37] [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2022-11-28 17:01:38] [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2022-11-28 17:01:38] [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+[2022-11-28 17:01:38] [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-11-28 17:01:38] [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-11-28 17:01:38] [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-11-28 17:01:39] [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@413e8246, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4c7b4a31, org.springframework.security.web.context.SecurityContextPersistenceFilter@27260f9c, org.springframework.security.web.header.HeaderWriterFilter@380e470a, org.springframework.security.web.authentication.logout.LogoutFilter@4c376b44, org.springframework.security.oauth2.server.resource.web.BearerTokenAuthenticationFilter@c6db00d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@54faa040, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c10f7a8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2df7766b, org.springframework.security.web.session.SessionManagementFilter@58fb5b8f, org.springframework.security.web.access.ExceptionTranslationFilter@7fb2645b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7a085d02]
+[2022-11-28 17:01:39] [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+[2022-11-28 17:01:39] [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[2022-11-28 17:01:39] [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+[2022-11-28 17:01:39] [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+[2022-11-28 17:01:39] [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 17:01:39] [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+[2022-11-28 17:01:39] [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+[2022-11-28 17:01:39] [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+[2022-11-28 17:01:39] [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+[2022-11-28 17:01:39] [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+[2022-11-28 17:01:39] [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+[2022-11-28 17:01:39] [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+[2022-11-28 17:01:40] [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+[2022-11-28 17:01:40] [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+[2022-11-28 17:01:40] [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+[2022-11-28 17:01:40] [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1669622500169 with initial instances count: 5
+[2022-11-28 17:01:40] [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application SURVEY-SERVICE with eureka with status UP
+[2022-11-28 17:01:40] [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1669622500173, current=UP, previous=STARTING]
+[2022-11-28 17:01:40] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8083"]
+[2022-11-28 17:01:40] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:4b2fc0c7a3a123af2ebae38d629530ab: registering service...
+[2022-11-28 17:01:40] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8083 (http) with context path ''
+[2022-11-28 17:01:40] [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8083
+[2022-11-28 17:01:40] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:4b2fc0c7a3a123af2ebae38d629530ab - registration status: 204
+[2022-11-28 17:01:40] [main] INFO  com.cloud.survey.SurveyApplication - Started SurveyApplication in 4.313 seconds (JVM running for 4.689)
+[2022-11-28 17:01:51] [http-nio-8083-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-11-28 17:01:51] [http-nio-8083-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2022-11-28 17:01:51] [http-nio-8083-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+[2022-11-28 17:02:52] [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application SURVEY-SERVICE with eureka with status DOWN
+[2022-11-28 17:02:52] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1669622572674, current=DOWN, previous=UP]
+[2022-11-28 17:02:52] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:4b2fc0c7a3a123af2ebae38d629530ab: registering service...
+[2022-11-28 17:02:52] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:4b2fc0c7a3a123af2ebae38d629530ab - registration status: 204
+[2022-11-28 17:02:52] [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-11-28 17:02:52] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2022-11-28 17:02:52] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2022-11-28 17:02:52] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+[2022-11-28 17:02:55] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+[2022-11-28 17:02:55] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:4b2fc0c7a3a123af2ebae38d629530ab - deregister  status: 200
+[2022-11-28 17:02:55] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+[2022-11-28 17:02:58] [main] INFO  com.cloud.survey.SurveyApplication - Starting SurveyApplication using Java 17.0.5 on oyeongjuui-MacBookAir.local with PID 7178 (/Users/youngjoooh/Desktop/GitHub/kakao_project/survey/target/classes started by youngjoooh in /Users/youngjoooh/Desktop/GitHub/kakao_project/survey)
+[2022-11-28 17:02:58] [main] INFO  com.cloud.survey.SurveyApplication - No active profile set, falling back to 1 default profile: "default"
+[2022-11-28 17:02:58] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-11-28 17:02:58] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89 ms. Found 5 JPA repository interfaces.
+[2022-11-28 17:02:59] [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=4d1d9ac9-f163-30c0-8de1-e1889e744ed8
+[2022-11-28 17:02:59] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8083 (http)
+[2022-11-28 17:02:59] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8083"]
+[2022-11-28 17:02:59] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2022-11-28 17:02:59] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+[2022-11-28 17:02:59] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2022-11-28 17:02:59] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 956 ms
+[2022-11-28 17:02:59] [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-11-28 17:02:59] [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
+[2022-11-28 17:02:59] [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-11-28 17:02:59] [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2022-11-28 17:02:59] [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2022-11-28 17:02:59] [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+[2022-11-28 17:02:59] [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-11-28 17:02:59] [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-11-28 17:03:00] [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-11-28 17:03:00] [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5e97da56, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6e8f3b76, org.springframework.security.web.context.SecurityContextPersistenceFilter@3f36c191, org.springframework.security.web.header.HeaderWriterFilter@7860a014, org.springframework.security.web.authentication.logout.LogoutFilter@7e8f97dd, org.springframework.security.oauth2.server.resource.web.BearerTokenAuthenticationFilter@7a0f1f9d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@54a5eff, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d208795, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6cfe32cd, org.springframework.security.web.session.SessionManagementFilter@65852d05, org.springframework.security.web.access.ExceptionTranslationFilter@21ebf9be, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c0a8787]
+[2022-11-28 17:03:00] [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+[2022-11-28 17:03:00] [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[2022-11-28 17:03:00] [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+[2022-11-28 17:03:01] [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+[2022-11-28 17:03:01] [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 17:03:01] [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+[2022-11-28 17:03:01] [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+[2022-11-28 17:03:01] [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+[2022-11-28 17:03:01] [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+[2022-11-28 17:03:01] [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+[2022-11-28 17:03:01] [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+[2022-11-28 17:03:01] [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+[2022-11-28 17:03:01] [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+[2022-11-28 17:03:01] [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+[2022-11-28 17:03:01] [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+[2022-11-28 17:03:01] [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1669622581246 with initial instances count: 4
+[2022-11-28 17:03:01] [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application SURVEY-SERVICE with eureka with status UP
+[2022-11-28 17:03:01] [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1669622581248, current=UP, previous=STARTING]
+[2022-11-28 17:03:01] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:41a778c0bc6619f803611832237ca281: registering service...
+[2022-11-28 17:03:01] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8083"]
+[2022-11-28 17:03:01] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8083 (http) with context path ''
+[2022-11-28 17:03:01] [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8083
+[2022-11-28 17:03:01] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:41a778c0bc6619f803611832237ca281 - registration status: 204
+[2022-11-28 17:03:01] [main] INFO  com.cloud.survey.SurveyApplication - Started SurveyApplication in 3.084 seconds (JVM running for 3.417)
+[2022-11-28 17:03:06] [http-nio-8083-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-11-28 17:03:06] [http-nio-8083-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2022-11-28 17:03:06] [http-nio-8083-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+[2022-11-28 17:04:11] [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application SURVEY-SERVICE with eureka with status DOWN
+[2022-11-28 17:04:11] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1669622651579, current=DOWN, previous=UP]
+[2022-11-28 17:04:11] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:41a778c0bc6619f803611832237ca281: registering service...
+[2022-11-28 17:04:11] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:41a778c0bc6619f803611832237ca281 - registration status: 204
+[2022-11-28 17:04:11] [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-11-28 17:04:11] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2022-11-28 17:04:11] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2022-11-28 17:04:11] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+[2022-11-28 17:04:14] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+[2022-11-28 17:04:14] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:41a778c0bc6619f803611832237ca281 - deregister  status: 200
+[2022-11-28 17:04:14] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+[2022-11-28 17:04:17] [main] INFO  com.cloud.survey.SurveyApplication - Starting SurveyApplication using Java 17.0.5 on oyeongjuui-MacBookAir.local with PID 7214 (/Users/youngjoooh/Desktop/GitHub/kakao_project/survey/target/classes started by youngjoooh in /Users/youngjoooh/Desktop/GitHub/kakao_project/survey)
+[2022-11-28 17:04:17] [main] INFO  com.cloud.survey.SurveyApplication - No active profile set, falling back to 1 default profile: "default"
+[2022-11-28 17:04:17] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-11-28 17:04:17] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 5 JPA repository interfaces.
+[2022-11-28 17:04:17] [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=4d1d9ac9-f163-30c0-8de1-e1889e744ed8
+[2022-11-28 17:04:18] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8083 (http)
+[2022-11-28 17:04:18] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8083"]
+[2022-11-28 17:04:18] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2022-11-28 17:04:18] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+[2022-11-28 17:04:18] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2022-11-28 17:04:18] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 933 ms
+[2022-11-28 17:04:18] [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-11-28 17:04:18] [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
+[2022-11-28 17:04:18] [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-11-28 17:04:18] [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2022-11-28 17:04:18] [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2022-11-28 17:04:18] [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+[2022-11-28 17:04:18] [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-11-28 17:04:18] [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-11-28 17:04:18] [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-11-28 17:04:19] [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2fb24ad8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1db7a4ae, org.springframework.security.web.context.SecurityContextPersistenceFilter@5ab29866, org.springframework.security.web.header.HeaderWriterFilter@77902ed6, org.springframework.security.web.authentication.logout.LogoutFilter@34907a49, org.springframework.security.oauth2.server.resource.web.BearerTokenAuthenticationFilter@38affd02, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@350ede1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3f36c191, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5ab70df7, org.springframework.security.web.session.SessionManagementFilter@f943847, org.springframework.security.web.access.ExceptionTranslationFilter@798753cc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@650a0b50]
+[2022-11-28 17:04:19] [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+[2022-11-28 17:04:19] [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[2022-11-28 17:04:19] [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+[2022-11-28 17:04:19] [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+[2022-11-28 17:04:19] [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 17:04:19] [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+[2022-11-28 17:04:19] [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+[2022-11-28 17:04:19] [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+[2022-11-28 17:04:19] [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+[2022-11-28 17:04:19] [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+[2022-11-28 17:04:19] [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+[2022-11-28 17:04:19] [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+[2022-11-28 17:04:20] [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+[2022-11-28 17:04:20] [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+[2022-11-28 17:04:20] [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+[2022-11-28 17:04:20] [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1669622660012 with initial instances count: 5
+[2022-11-28 17:04:20] [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application SURVEY-SERVICE with eureka with status UP
+[2022-11-28 17:04:20] [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1669622660015, current=UP, previous=STARTING]
+[2022-11-28 17:04:20] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:dbd0d03ecd0d773693f18d607da9c59f: registering service...
+[2022-11-28 17:04:20] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8083"]
+[2022-11-28 17:04:20] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8083 (http) with context path ''
+[2022-11-28 17:04:20] [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8083
+[2022-11-28 17:04:20] [main] INFO  com.cloud.survey.SurveyApplication - Started SurveyApplication in 3.203 seconds (JVM running for 3.516)
+[2022-11-28 17:04:20] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:dbd0d03ecd0d773693f18d607da9c59f - registration status: 204
+[2022-11-28 17:09:19] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 17:14:19] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 17:19:19] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 17:24:19] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 17:28:18] [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application SURVEY-SERVICE with eureka with status DOWN
+[2022-11-28 17:28:18] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1669624098905, current=DOWN, previous=UP]
+[2022-11-28 17:28:18] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:dbd0d03ecd0d773693f18d607da9c59f: registering service...
+[2022-11-28 17:28:18] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:dbd0d03ecd0d773693f18d607da9c59f - registration status: 204
+[2022-11-28 17:28:18] [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-11-28 17:28:18] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2022-11-28 17:28:18] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2022-11-28 17:28:18] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+[2022-11-28 17:28:21] [DiscoveryClient-0] WARN  c.n.discovery.TimedSupervisorTask - task supervisor shutting down, can't accept the task
+[2022-11-28 17:28:21] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+[2022-11-28 17:28:22] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:dbd0d03ecd0d773693f18d607da9c59f - deregister  status: 200
+[2022-11-28 17:28:22] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+[2022-11-28 17:28:24] [main] INFO  com.cloud.survey.SurveyApplication - Starting SurveyApplication using Java 17.0.5 on oyeongjuui-MacBookAir.local with PID 7405 (/Users/youngjoooh/Desktop/GitHub/kakao_project/survey/target/classes started by youngjoooh in /Users/youngjoooh/Desktop/GitHub/kakao_project/survey)
+[2022-11-28 17:28:24] [main] INFO  com.cloud.survey.SurveyApplication - No active profile set, falling back to 1 default profile: "default"
+[2022-11-28 17:28:25] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-11-28 17:28:25] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 108 ms. Found 5 JPA repository interfaces.
+[2022-11-28 17:28:25] [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=4d1d9ac9-f163-30c0-8de1-e1889e744ed8
+[2022-11-28 17:28:25] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8083 (http)
+[2022-11-28 17:28:25] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8083"]
+[2022-11-28 17:28:25] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2022-11-28 17:28:25] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+[2022-11-28 17:28:25] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2022-11-28 17:28:25] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1116 ms
+[2022-11-28 17:28:26] [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-11-28 17:28:26] [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
+[2022-11-28 17:28:26] [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-11-28 17:28:26] [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2022-11-28 17:28:26] [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2022-11-28 17:28:26] [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+[2022-11-28 17:28:26] [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-11-28 17:28:26] [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-11-28 17:28:26] [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-11-28 17:28:27] [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@823f978, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6195ce27, org.springframework.security.web.context.SecurityContextPersistenceFilter@33de9d85, org.springframework.security.web.header.HeaderWriterFilter@40c92dfa, org.springframework.security.web.authentication.logout.LogoutFilter@3f36c191, org.springframework.security.oauth2.server.resource.web.BearerTokenAuthenticationFilter@c0a8787, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@24455d50, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77902ed6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@397b5b2d, org.springframework.security.web.session.SessionManagementFilter@1e205025, org.springframework.security.web.access.ExceptionTranslationFilter@6768dc74, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1644cc2d]
+[2022-11-28 17:28:27] [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+[2022-11-28 17:28:27] [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[2022-11-28 17:28:27] [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+[2022-11-28 17:28:27] [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+[2022-11-28 17:28:27] [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 17:28:27] [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+[2022-11-28 17:28:27] [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+[2022-11-28 17:28:27] [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+[2022-11-28 17:28:27] [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+[2022-11-28 17:28:27] [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+[2022-11-28 17:28:27] [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+[2022-11-28 17:28:27] [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+[2022-11-28 17:28:27] [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+[2022-11-28 17:28:27] [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+[2022-11-28 17:28:27] [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+[2022-11-28 17:28:27] [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1669624107694 with initial instances count: 5
+[2022-11-28 17:28:27] [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application SURVEY-SERVICE with eureka with status UP
+[2022-11-28 17:28:27] [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1669624107697, current=UP, previous=STARTING]
+[2022-11-28 17:28:27] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:beb9ea28ba25677ad0eb1d66e4394dab: registering service...
+[2022-11-28 17:28:27] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8083"]
+[2022-11-28 17:28:27] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8083 (http) with context path ''
+[2022-11-28 17:28:27] [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8083
+[2022-11-28 17:28:27] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:beb9ea28ba25677ad0eb1d66e4394dab - registration status: 204
+[2022-11-28 17:28:27] [main] INFO  com.cloud.survey.SurveyApplication - Started SurveyApplication in 3.225 seconds (JVM running for 3.544)
+[2022-11-28 17:33:27] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 17:35:24] [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application SURVEY-SERVICE with eureka with status DOWN
+[2022-11-28 17:35:24] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1669624524774, current=DOWN, previous=UP]
+[2022-11-28 17:35:24] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:beb9ea28ba25677ad0eb1d66e4394dab: registering service...
+[2022-11-28 17:35:24] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:beb9ea28ba25677ad0eb1d66e4394dab - registration status: 204
+[2022-11-28 17:35:24] [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-11-28 17:35:24] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2022-11-28 17:35:24] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2022-11-28 17:35:24] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+[2022-11-28 17:35:27] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+[2022-11-28 17:35:27] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:beb9ea28ba25677ad0eb1d66e4394dab - deregister  status: 200
+[2022-11-28 17:35:27] [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+[2022-11-28 17:35:31] [main] INFO  com.cloud.survey.SurveyApplication - Starting SurveyApplication using Java 17.0.5 on oyeongjuui-MacBookAir.local with PID 7492 (/Users/youngjoooh/Desktop/GitHub/kakao_project/survey/target/classes started by youngjoooh in /Users/youngjoooh/Desktop/GitHub/kakao_project/survey)
+[2022-11-28 17:35:31] [main] INFO  com.cloud.survey.SurveyApplication - No active profile set, falling back to 1 default profile: "default"
+[2022-11-28 17:35:31] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-11-28 17:35:31] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 88 ms. Found 5 JPA repository interfaces.
+[2022-11-28 17:35:32] [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=4d1d9ac9-f163-30c0-8de1-e1889e744ed8
+[2022-11-28 17:35:32] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8083 (http)
+[2022-11-28 17:35:32] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8083"]
+[2022-11-28 17:35:32] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2022-11-28 17:35:32] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+[2022-11-28 17:35:32] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2022-11-28 17:35:32] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1420 ms
+[2022-11-28 17:35:32] [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-11-28 17:35:32] [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
+[2022-11-28 17:35:32] [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-11-28 17:35:32] [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2022-11-28 17:35:32] [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2022-11-28 17:35:32] [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+[2022-11-28 17:35:33] [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-11-28 17:35:33] [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-11-28 17:35:33] [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-11-28 17:35:33] [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@cda988, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7e92e9a2, org.springframework.security.web.context.SecurityContextPersistenceFilter@5f5076f9, org.springframework.security.web.header.HeaderWriterFilter@35d4fecf, org.springframework.security.web.authentication.logout.LogoutFilter@20843604, org.springframework.security.oauth2.server.resource.web.BearerTokenAuthenticationFilter@7d31fb6c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f53f5a4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@76b6bad3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c0a8787, org.springframework.security.web.session.SessionManagementFilter@77262e71, org.springframework.security.web.access.ExceptionTranslationFilter@25031fd4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@413e8246]
+[2022-11-28 17:35:34] [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+[2022-11-28 17:35:34] [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[2022-11-28 17:35:34] [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+[2022-11-28 17:35:34] [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+[2022-11-28 17:35:34] [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 17:35:34] [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+[2022-11-28 17:35:34] [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+[2022-11-28 17:35:34] [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+[2022-11-28 17:35:34] [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+[2022-11-28 17:35:34] [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+[2022-11-28 17:35:34] [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+[2022-11-28 17:35:34] [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+[2022-11-28 17:35:34] [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+[2022-11-28 17:35:34] [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+[2022-11-28 17:35:34] [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+[2022-11-28 17:35:34] [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1669624534364 with initial instances count: 3
+[2022-11-28 17:35:34] [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application SURVEY-SERVICE with eureka with status UP
+[2022-11-28 17:35:34] [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1669624534366, current=UP, previous=STARTING]
+[2022-11-28 17:35:34] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:ce7594a6ae754153253c2e713c06eb2c: registering service...
+[2022-11-28 17:35:34] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8083"]
+[2022-11-28 17:35:34] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8083 (http) with context path ''
+[2022-11-28 17:35:34] [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8083
+[2022-11-28 17:35:34] [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:ce7594a6ae754153253c2e713c06eb2c - registration status: 204
+[2022-11-28 17:35:34] [main] INFO  com.cloud.survey.SurveyApplication - Started SurveyApplication in 3.682 seconds (JVM running for 4.134)
+[2022-11-28 17:40:19] [http-nio-8083-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-11-28 17:40:19] [http-nio-8083-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2022-11-28 17:40:19] [http-nio-8083-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+[2022-11-28 17:40:34] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 17:45:34] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 17:50:34] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 17:55:34] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 18:00:34] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 18:05:34] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 18:10:34] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 18:15:34] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 18:20:34] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 18:25:34] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 18:30:34] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 18:35:34] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 18:37:05] [http-nio-8083-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2022-11-30 14:55:58.242000": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2022-11-30 14:55:58.242000' could not be parsed at index 10; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDateTime` from String "2022-11-30 14:55:58.242000": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2022-11-30 14:55:58.242000' could not be parsed at index 10<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 10, column: 18] (through reference chain: com.cloud.survey.dto.survey.SurveyRequestDTO["survey"]->com.cloud.survey.dto.survey.SurveyDTO["dueDt"])]
+[2022-11-28 18:37:26] [http-nio-8083-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2022-11-30 14:55:58.242000": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2022-11-30 14:55:58.242000' could not be parsed at index 10; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDateTime` from String "2022-11-30 14:55:58.242000": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2022-11-30 14:55:58.242000' could not be parsed at index 10<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 10, column: 18] (through reference chain: com.cloud.survey.dto.survey.SurveyRequestDTO["survey"]->com.cloud.survey.dto.survey.SurveyDTO["dueDt"])]
+[2022-11-28 18:37:46] [http-nio-8083-exec-5] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+[2022-11-28 18:37:46] [http-nio-8083-exec-5] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+[2022-11-28 18:37:46] [http-nio-8083-exec-5] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.1.2
+[2022-11-28 18:37:46] [http-nio-8083-exec-5] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f8c67dc3ae0a3265
+[2022-11-28 18:37:46] [http-nio-8083-exec-5] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1669628266147
+[2022-11-28 18:37:46] [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition ANSWER_ANALYSIS-0 to 0 since the associated topicId changed from null to yfErt6RRTUqPC_MEY0CI1A
+[2022-11-28 18:37:46] [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: BuErQl3jTnmhWYW0yQb2qQ
+[2022-11-28 18:37:46] [kafka-producer-network-thread | producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 1 with epoch 0
+[2022-11-28 18:37:52] [http-nio-8083-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because "surId" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because "surId" is null
+	at com.cloud.survey.service.AnswerServiceImpl.insertAnswer(AnswerServiceImpl.java:87)
+	at com.cloud.survey.service.AnswerServiceImpl$$FastClassBySpringCGLIB$$ab0a70d0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704)
+	at com.cloud.survey.service.AnswerServiceImpl$$EnhancerBySpringCGLIB$$b6582c5a.insertAnswer(<generated>)
+	at com.cloud.survey.controller.AnswerController.registerAnswer(AnswerController.java:52)
+	at com.cloud.survey.controller.AnswerController$$FastClassBySpringCGLIB$$c822c9be.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.cloud.survey.controller.AnswerController$$EnhancerBySpringCGLIB$$ae313be4.registerAnswer(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.oauth2.server.resource.web.BearerTokenAuthenticationFilter.doFilterInternal(BearerTokenAuthenticationFilter.java:125)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.keycloak.adapters.tomcat.AbstractAuthenticatedActionsValve.invoke(AbstractAuthenticatedActionsValve.java:67)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.keycloak.adapters.tomcat.AbstractKeycloakAuthenticatorValve.invoke(AbstractKeycloakAuthenticatorValve.java:181)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2022-11-28 18:38:01] [http-nio-8083-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2022-11-30 14:55:58.242000": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2022-11-30 14:55:58.242000' could not be parsed at index 10; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDateTime` from String "2022-11-30 14:55:58.242000": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2022-11-30 14:55:58.242000' could not be parsed at index 10<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 10, column: 18] (through reference chain: com.cloud.survey.dto.survey.SurveyRequestDTO["survey"]->com.cloud.survey.dto.survey.SurveyDTO["dueDt"])]
+[2022-11-28 18:38:31] [http-nio-8083-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.lang.Integer` from String "허ㅏㄴㅇㄹ허ㅏㅣㅇㄴㄹ": not a valid `java.lang.Integer` value; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.lang.Integer` from String "허ㅏㄴㅇㄹ허ㅏㅣㅇㄴㄹ": not a valid `java.lang.Integer` value<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 14] (through reference chain: com.cloud.survey.dto.answer.AnswerRequestDTO["surId"])]
+[2022-11-28 18:38:47] [http-nio-8083-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2022-11-30 14:55:58.242000": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2022-11-30 14:55:58.242000' could not be parsed at index 10; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDateTime` from String "2022-11-30 14:55:58.242000": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2022-11-30 14:55:58.242000' could not be parsed at index 10<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 10, column: 18] (through reference chain: com.cloud.survey.dto.survey.SurveyRequestDTO["survey"]->com.cloud.survey.dto.survey.SurveyDTO["dueDt"])]
+[2022-11-28 18:39:57] [http-nio-8083-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2022-11-30 14:55:58.242000": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2022-11-30 14:55:58.242000' could not be parsed at index 10; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDateTime` from String "2022-11-30 14:55:58.242000": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2022-11-30 14:55:58.242000' could not be parsed at index 10<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 10, column: 18] (through reference chain: com.cloud.survey.dto.survey.SurveyRequestDTO["survey"]->com.cloud.survey.dto.survey.SurveyDTO["dueDt"])]
+[2022-11-28 18:40:07] [http-nio-8083-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2022-11-30 14:55:58.242000": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2022-11-30 14:55:58.242000' could not be parsed at index 10; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDateTime` from String "2022-11-30 14:55:58.242000": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2022-11-30 14:55:58.242000' could not be parsed at index 10<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 10, column: 18] (through reference chain: com.cloud.survey.dto.survey.SurveyRequestDTO["survey"]->com.cloud.survey.dto.survey.SurveyDTO["dueDt"])]
+[2022-11-28 18:40:34] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 18:41:05] [http-nio-8083-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "{{current_timestamp}}": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '{{current_timestamp}}' could not be parsed at index 0; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDateTime` from String "{{current_timestamp}}": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '{{current_timestamp}}' could not be parsed at index 0<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 10, column: 18] (through reference chain: com.cloud.survey.dto.survey.SurveyRequestDTO["survey"]->com.cloud.survey.dto.survey.SurveyDTO["dueDt"])]
+[2022-11-28 18:45:34] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 18:46:46] [kafka-producer-network-thread | producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
+[2022-11-28 18:47:27] [http-nio-8083-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2022-11-30 14:55:58.242000": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2022-11-30 14:55:58.242000' could not be parsed at index 10; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDateTime` from String "2022-11-30 14:55:58.242000": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2022-11-30 14:55:58.242000' could not be parsed at index 10<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 10, column: 18] (through reference chain: com.cloud.survey.dto.survey.SurveyRequestDTO["survey"]->com.cloud.survey.dto.survey.SurveyDTO["dueDt"])]
+[2022-11-28 18:50:34] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 18:50:41] [http-nio-8083-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2022-11-30 14:55:58.242000": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2022-11-30 14:55:58.242000' could not be parsed at index 10; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDateTime` from String "2022-11-30 14:55:58.242000": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2022-11-30 14:55:58.242000' could not be parsed at index 10<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 10, column: 18] (through reference chain: com.cloud.survey.dto.survey.SurveyRequestDTO["survey"]->com.cloud.survey.dto.survey.SurveyDTO["dueDt"])]
+[2022-11-28 18:55:04] [http-nio-8083-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2022-11-30 14:55:58.242000": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2022-11-30 14:55:58.242000' could not be parsed at index 10; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDateTime` from String "2022-11-30 14:55:58.242000": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2022-11-30 14:55:58.242000' could not be parsed at index 10<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 10, column: 18] (through reference chain: com.cloud.survey.dto.survey.SurveyRequestDTO["survey"]->com.cloud.survey.dto.survey.SurveyDTO["dueDt"])]
+[2022-11-28 18:55:34] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 18:55:49] [http-nio-8083-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2022-11-30 14:55:58.242000": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2022-11-30 14:55:58.242000' could not be parsed at index 10; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDateTime` from String "2022-11-30 14:55:58.242000": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2022-11-30 14:55:58.242000' could not be parsed at index 10<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 10, column: 18] (through reference chain: com.cloud.survey.dto.survey.SurveyRequestDTO["survey"]->com.cloud.survey.dto.survey.SurveyDTO["dueDt"])]
+[2022-11-28 19:11:55] [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m21s501ms).
+[2022-11-28 19:11:59] [DiscoveryClient-HeartbeatExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:ce7594a6ae754153253c2e713c06eb2c - Re-registering apps/SURVEY-SERVICE
+[2022-11-28 19:11:59] [DiscoveryClient-HeartbeatExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:ce7594a6ae754153253c2e713c06eb2c: registering service...
+[2022-11-28 19:11:59] [DiscoveryClient-HeartbeatExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:ce7594a6ae754153253c2e713c06eb2c - registration status: 204
+[2022-11-28 19:41:50] [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=29m55s134ms).
+[2022-11-28 20:26:43] [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=44m53s332ms).
+[2022-11-28 20:41:41] [DiscoveryClient-HeartbeatExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:ce7594a6ae754153253c2e713c06eb2c - Re-registering apps/SURVEY-SERVICE
+[2022-11-28 20:41:41] [DiscoveryClient-HeartbeatExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:ce7594a6ae754153253c2e713c06eb2c: registering service...
+[2022-11-28 20:41:41] [DiscoveryClient-HeartbeatExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:ce7594a6ae754153253c2e713c06eb2c - registration status: 204
+[2022-11-28 21:11:45] [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45m1s582ms).
+[2022-11-28 21:11:45] [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2022-11-28 22:32:24] [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h20m39s117ms).
+[2022-11-28 22:32:29] [DiscoveryClient-HeartbeatExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:ce7594a6ae754153253c2e713c06eb2c - Re-registering apps/SURVEY-SERVICE
+[2022-11-28 22:32:29] [DiscoveryClient-HeartbeatExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:ce7594a6ae754153253c2e713c06eb2c: registering service...
+[2022-11-28 22:32:29] [DiscoveryClient-HeartbeatExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_SURVEY-SERVICE/survey-service:ce7594a6ae754153253c2e713c06eb2c - registration status: 204
+[2022-11-28 23:18:52] [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46m27s900ms).

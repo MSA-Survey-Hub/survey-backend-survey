@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="FILE_LOG_PATTERN" value="[%d{yyyy-MM-dd HH:mm:ss}] [%thread] %-5level %logger{36} - %msg%n"/>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${FILE_LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+    <property name="LOG_DIR" value="./logs" />
+    <property name="LOG_NAME" value="survey_platform.log" />
+    <property name="LOG_PATH_NAME" value="${LOG_DIR}/${LOG_NAME}" />
+    ...
+    <!-- 이부분 추가 -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH_NAME}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- 날짜별로 분리 -->
+            <fileNamePattern>${LOG_DIR}/%d{yyyy-MM-dd}/${LOG_NAME}.%d{yyyy-MM-dd}.%i</fileNamePattern>
+            <maxFileSize>100MB</maxFileSize>
+            <maxHistory>90</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${FILE_LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+    ...
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+        <!-- 이부분 추가 -->
+        <appender-ref ref="FILE" />
+    </root>
+</configuration>
