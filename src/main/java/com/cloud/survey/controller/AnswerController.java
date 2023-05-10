@@ -60,10 +60,10 @@ public class AnswerController {
             accruePointMap.put("type", "E");
             Map<String, Object> map = new HashMap<>();
             map.put("accrue_point_map", accruePointMap);
-            kafkaProducer.sendObjetMap("ANSWER_POINT", map);
+            kafkaProducer.sendObjectMap("ANSWER_POINT", map);
         }
         // 설문조사 피설문자 통계 토픽 생성
-        kafkaProducer.sendObjetMap("ANSWER_ANALYSIS",answerService.getSurveyAnswerAnalysis(surId));
+        kafkaProducer.sendObjectMap("ANSWER_ANALYSIS",answerService.getSurveyAnswerAnalysis(surId));
 
 
         return new ResponseEntity<>("Success", HttpStatus.OK);

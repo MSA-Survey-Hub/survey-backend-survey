@@ -5,6 +5,7 @@ import com.cloud.survey.dto.PageRequestDTO;
 import com.cloud.survey.dto.question.QuestionDTO;
 import com.cloud.survey.dto.survey.SurveyDTO;
 import com.cloud.survey.dto.survey.SurveyRequestDTO;
+import com.cloud.survey.dto.surveyTarget.SurveyTargetDTO;
 import com.cloud.survey.entity.*;
 import org.springframework.data.domain.Page;
 
@@ -29,7 +30,7 @@ public interface SurveyService {
     Survey insertSurvey(SurveyDTO surveyDTO, String userId);
 
     // 설문조사 타겟 생성
-    void insertSurveyTarget(List<SurveyTarget> targetList);
+    void insertSurveyTarget(List<String> surveyTargetList,Integer surId);
 
     // 설문 상세정보 조회
     SurveyDTO getSurveyDetail (int surId);

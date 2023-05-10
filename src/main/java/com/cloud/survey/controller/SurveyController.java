@@ -4,11 +4,10 @@ import com.cloud.survey.dto.PageRequestDTO;
 import com.cloud.survey.dto.question.QuestionDTO;
 import com.cloud.survey.dto.survey.SurveyDTO;
 import com.cloud.survey.dto.survey.SurveyRequestDTO;
+import com.cloud.survey.dto.surveyTarget.SurveyTargetDTO;
+import com.cloud.survey.dto.user.UserDTO;
 import com.cloud.survey.dto.vulgarism.VulgarismDTO;
-import com.cloud.survey.entity.IsYn;
-import com.cloud.survey.entity.Survey;
-import com.cloud.survey.entity.SurveyStatus;
-import com.cloud.survey.entity.SurveyVulgarism;
+import com.cloud.survey.entity.*;
 import com.cloud.survey.service.AnswerService;
 import com.cloud.survey.service.QuestionService;
 import com.cloud.survey.service.SurveyService;
@@ -117,21 +116,23 @@ public class SurveyController {
     @Transactional
     @PostMapping("/reg")
     public ResponseEntity<String> registerSurvey(Principal principal, @RequestBody SurveyRequestDTO surveyRequestDTO) {
-
         JwtAuthenticationToken token = (JwtAuthenticationToken) principal;
         String userId = token.getTokenAttributes().get("preferred_username").toString();
 
         SurveyDTO surveyDTO = surveyRequestDTO.getSurvey();
         List<QuestionDTO> questionDTOList = surveyRequestDTO.getQuestionDTOList();
+        List<String> userDTOList = surveyRequestDTO.getSurveyTargetList();
 
         Survey survey = surveyService.insertSurvey(surveyDTO, userId);
+        surveyService.insertSurveyTarget(userDTOList,survey.getSurId());
         questionService.insertSurveyQuestion(questionDTOList, survey, userId);
 
         // 설문 생성 카프카 토픽
         Map<String, Object> surveyMap = new HashMap<>();
         surveyMap.put("survey_info", survey);
         surveyMap.put("question_List", questionDTOList);
-        kafkaProducer.sendObjetMap("SURVEY_REG",surveyMap);
+        kafkaProducer.sendObjectMap("SURVEY_REG",surveyMap);
+        System.out.printf("\nsurvey_reg sent to analysis server: %s\n",surveyMap);
 
         return new ResponseEntity<>("Success", HttpStatus.OK);
     }

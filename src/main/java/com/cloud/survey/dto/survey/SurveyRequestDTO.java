@@ -2,6 +2,8 @@ package com.cloud.survey.dto.survey;
 
 import com.cloud.survey.dto.answer.AnswerDTO;
 import com.cloud.survey.dto.question.QuestionDTO;
+import com.cloud.survey.dto.surveyTarget.SurveyTargetDTO;
+import com.cloud.survey.dto.user.UserDTO;
 import com.cloud.survey.entity.SurveyTarget;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,4 +19,5 @@ import java.util.List;
 public class SurveyRequestDTO {
     SurveyDTO survey;
     List<QuestionDTO> questionDTOList;
+    List<String> surveyTargetList;
 }

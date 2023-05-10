@@ -5,6 +5,7 @@ import com.cloud.survey.dto.question.QuestionDTO;
 import com.cloud.survey.dto.survey.SurveyCategoryDTO;
 import com.cloud.survey.dto.survey.SurveyDTO;
 import com.cloud.survey.dto.survey.SurveyRequestDTO;
+import com.cloud.survey.dto.surveyTarget.SurveyTargetDTO;
 import com.cloud.survey.entity.*;
 import com.cloud.survey.entity.Survey;
 import com.cloud.survey.entity.SurveyCategory;
@@ -13,6 +14,7 @@ import com.cloud.survey.entity.SurveyStatus;
 import com.cloud.survey.repository.QuestionRepository;
 import com.cloud.survey.repository.SurveyCategoryRepository;
 import com.cloud.survey.repository.SurveyRepository;
+import com.cloud.survey.repository.SurveyTargetRepository;
 import com.querydsl.core.Tuple;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -39,13 +41,15 @@ public class SurveyServiceImpl implements SurveyService{
     private final SurveyCategoryRepository surveyCategoryRepository;
     @Autowired
     private final SurveyRepository surveyRepository;
+
+    @Autowired
+    private final SurveyTargetRepository surveyTargetRepository;
     
     @Autowired
     private final ModelMapper mapper;
 
     @Override
     public List<SurveyDTO> getSurveyList(SurveyStatus status, IsYn isPrivateYn){
-
         List<SurveyDTO> surveyDtoList = new ArrayList<>();
         List<Survey> surveyList = surveyRepository.findByStatusAndIsPrivateYn(status, isPrivateYn);
 
@@ -81,7 +85,15 @@ public class SurveyServiceImpl implements SurveyService{
         return save;
     }
 
-    public void insertSurveyTarget( List<SurveyTarget> targetList){
+    public void insertSurveyTarget(List<String> target,Integer surId){
+        Survey survey = surveyRepository.findBySurId(surId);
+        target.forEach((user)->{
+            SurveyTarget surveyTarget = SurveyTarget.builder()
+                    .survey(survey)
+                    .targetId(user)
+                    .build();
+            surveyTargetRepository.save(surveyTarget);
+        });
 
     }
 
