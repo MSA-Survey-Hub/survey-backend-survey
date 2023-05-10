@@ -68,8 +68,15 @@ public class SurveyServiceImpl implements SurveyService{
 
     public Page<Map<String,Object>> getSurveyParticipateList(String title, String regId, Integer category_id, SurveyStatus status, PageRequestDTO requestDTO){
         Pageable pageable = requestDTO.getPageable(Sort.by("reg_dt").descending());
+        List<SurveyTarget> surveyTarget = surveyTargetRepository.findByTargetId(regId)
+                .orElseThrow(()->new RuntimeException("설문에 포함되어 있지 않은 아이디입니다"));
+
+        List<Survey> surveyList = new ArrayList<>();
+        surveyTarget.forEach((target)->{
+            surveyList.add(target.getSurvey());
+        });
+
         return surveyRepository.findByCategoryIdAndRegIdAndStatus(regId, pageable);
-//        return surveyRepositoryCustom.findByCategoryIdAndStatusAndTitle(title, regId, category_id, status, pageable);
     }
 
     public Page<Map<String,Object>> getSurveyMakeList(String title, String regId, Integer category_id, SurveyStatus status, PageRequestDTO requestDTO){

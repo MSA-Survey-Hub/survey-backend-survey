@@ -79,14 +79,9 @@ public class SurveyController {
         JwtAuthenticationToken token = (JwtAuthenticationToken) principal;
         String userId = token.getTokenAttributes().get("preferred_username").toString();
 
-//        List<Tuple> list
         Page<Map<String, Object>> list =
                 surveyService.getSurveyParticipateList(title, userId, categoryId, status, pageRequestDTO);
 
-//        Map<String, Object> returnMap = new HashMap<>();
-//        for (Tuple tuple : list) {
-//            returnMap.put(tuple.get(0,String.class), tuple.get(1,Object.class));
-//        }
         return new ResponseEntity<>(list, HttpStatus.OK);
 
     }
