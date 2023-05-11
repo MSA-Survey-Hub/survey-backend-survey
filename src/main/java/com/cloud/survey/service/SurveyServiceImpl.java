@@ -1,5 +1,6 @@
 package com.cloud.survey.service;
 
+import com.cloud.survey.config.page.PageResult;
 import com.cloud.survey.dto.PageRequestDTO;
 import com.cloud.survey.dto.question.QuestionDTO;
 import com.cloud.survey.dto.survey.SurveyCategoryDTO;
@@ -21,11 +22,10 @@ import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -66,17 +66,12 @@ public class SurveyServiceImpl implements SurveyService{
         return surveyRepository.findByCategoryIdAndStatus(category_id, pageable);
     }
 
-    public Page<Map<String,Object>> getSurveyParticipateList(String title, String regId, Integer category_id, SurveyStatus status, PageRequestDTO requestDTO){
-        Pageable pageable = requestDTO.getPageable(Sort.by("reg_dt").descending());
-        List<SurveyTarget> surveyTarget = surveyTargetRepository.findByTargetId(regId)
-                .orElseThrow(()->new RuntimeException("설문에 포함되어 있지 않은 아이디입니다"));
 
-        List<Survey> surveyList = new ArrayList<>();
-        surveyTarget.forEach((target)->{
-            surveyList.add(target.getSurvey());
-        });
+    public Page<Survey> getSurveyParticipateList(String title, String regId, Integer category_id, SurveyStatus status, PageRequestDTO requestDTO){
+        Pageable pageable = requestDTO.getPageable(Sort.by("no").descending());
+        Page<Survey> surveyTarget = surveyTargetRepository.findByTargetId(pageable,regId);
 
-        return surveyRepository.findByCategoryIdAndRegIdAndStatus(regId, pageable);
+        return surveyTarget;
     }
 
     public Page<Map<String,Object>> getSurveyMakeList(String title, String regId, Integer category_id, SurveyStatus status, PageRequestDTO requestDTO){

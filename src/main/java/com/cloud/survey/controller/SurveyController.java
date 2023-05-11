@@ -1,5 +1,6 @@
 package com.cloud.survey.controller;
 
+import com.cloud.survey.config.page.PageResult;
 import com.cloud.survey.dto.PageRequestDTO;
 import com.cloud.survey.dto.question.QuestionDTO;
 import com.cloud.survey.dto.survey.SurveyDTO;
@@ -60,7 +61,7 @@ public class SurveyController {
 
     // 설문 검색리스트 조회
     @RequestMapping(value = "/search_list", method = RequestMethod.GET)
-    public ResponseEntity< Page<Map<String,Object>>> getSearchList(
+    public ResponseEntity<Page<Map<String,Object>>> getSearchList(
             @RequestParam (value = "category_id", required = false) Integer categoryId, @RequestParam (value = "status", required = false) SurveyStatus status, PageRequestDTO pageRequestDTO) {
 
         Page<Map<String,Object>> list = surveyService.getSurveySearchList(categoryId, status, pageRequestDTO);
@@ -70,7 +71,7 @@ public class SurveyController {
     // 설문 참여리스트 조회
     @PreAuthorize("hasRole('ROLE_USER')")
     @RequestMapping(value = "/ptcp_list", method = RequestMethod.GET)
-    public ResponseEntity<Page<Map<String,Object>>> getParticipateList(
+    public ResponseEntity<Page<Survey>> getParticipateList(
                                                     @RequestParam (value = "category_id", required = false) Integer categoryId,
                                                     @RequestParam (value = "status", required = false) SurveyStatus status,
                                                     @RequestParam (value = "title", required = false) String title,
@@ -79,11 +80,9 @@ public class SurveyController {
         JwtAuthenticationToken token = (JwtAuthenticationToken) principal;
         String userId = token.getTokenAttributes().get("preferred_username").toString();
 
-        Page<Map<String, Object>> list =
+        Page<Survey> list =
                 surveyService.getSurveyParticipateList(title, userId, categoryId, status, pageRequestDTO);
-
         return new ResponseEntity<>(list, HttpStatus.OK);
-
     }
 
 

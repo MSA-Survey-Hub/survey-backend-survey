@@ -1,6 +1,7 @@
 package com.cloud.survey.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -37,7 +38,7 @@ public class Survey {
         private String description;
 
         @Comment("설문 카테고리")
-        @ManyToOne(fetch = FetchType.LAZY)
+        @ManyToOne(fetch = FetchType.EAGER) // EntityMapping 수정 요함
         @JoinColumn(name = "category_id", nullable = false)
         private SurveyCategory surveyCategory;
 

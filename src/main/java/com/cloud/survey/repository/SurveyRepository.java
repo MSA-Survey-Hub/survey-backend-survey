@@ -83,4 +83,6 @@ public interface SurveyRepository extends JpaRepository<Survey, Integer> {
 
     @Query("select s.surId from Survey s where s.surveyCategory.surCatId = :surCatId")
     List<Integer> findSurIdBySurCatId(Integer surCatId);
+
+
 }
