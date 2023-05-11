@@ -33,25 +33,8 @@ public interface SurveyRepository extends JpaRepository<Survey, Integer> {
             , nativeQuery = true)
     Page<Map<String,Object>> findByCategoryIdAndStatus(@Param("categoryId") int categoryId, Pageable pageable);
 
-
-    @Query(value =
-            "SELECT" +
-            "    sc.content, " +
-            "    case " +
-            "        when s.status = 'P' then '제작' " +
-            "        when s.status = 'I' && due_dt > now() then '배포' " +
-            "        when s.status = 'I' && due_dt < now() then '마감' " +
-            "        end status_name, " +
-            "    if(s.status = 'I' && due_dt < now(), 'F', s.status) display_status, " +
-            "    s.* " +
-            "FROM survey s left join survey_category sc on sc.sur_cat_id = s.category_id " +
-            "WHERE 1=1 " +
-            "and s.status <> 'D'" +
-//            "and s.category_id = :categoryId " +
-//            "and s.status = :#{#status?.name()} " +
-            "and s.reg_id = :regId", nativeQuery = true)
-    Page<Map<String,Object>> findByCategoryIdAndRegId(@Param("regId") String regId, Pageable pageable);
-
+    @Query("select s from Survey s where s.surveyCategory.surCatId =:categoryId and s.regId =:regId")
+    Page<Survey> findByCategoryIdAndRegId(Integer categoryId, String regId, Pageable pageable);
 
     @Query(value =
             "SELECT" +
@@ -81,7 +64,7 @@ public interface SurveyRepository extends JpaRepository<Survey, Integer> {
     Survey findBestSurveyByCategory(Integer surCatId);
 
 
-    @Query("select s.surId from Survey s where s.surveyCategory.surCatId = :surCatId")
+    @Query("select s.surId from Survey s where s.surveyCategory.surCatId = :surCatId" )
     List<Integer> findSurIdBySurCatId(Integer surCatId);
 
 

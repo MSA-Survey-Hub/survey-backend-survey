@@ -25,7 +25,7 @@ public interface SurveyService {
     Page<Survey> getSurveyParticipateList(String title, String regId, Integer category_id, SurveyStatus status, PageRequestDTO requestDTO);
 
     // 설문조사 생성 리스트 조회
-    Page<Map<String,Object>> getSurveyMakeList(String title, String regId, Integer category_id, SurveyStatus status, PageRequestDTO requestDTO);
+    Page<Survey> getSurveyMakeList( String regId, Integer category_id, PageRequestDTO requestDTO);
 
     // 설문조사 생성
     Survey insertSurvey(SurveyDTO surveyDTO, String userId);
@@ -38,7 +38,6 @@ public interface SurveyService {
 
     // 카테고리별 인기 설문조사 조회
     List<Survey> getBestSurvey();
-
 
     default Survey dtoToEntity(SurveyDTO dto, SurveyCategory surveyCategory, String userId) {
         Survey survey = Survey.builder()

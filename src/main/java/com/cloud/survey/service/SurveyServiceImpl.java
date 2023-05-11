@@ -66,7 +66,7 @@ public class SurveyServiceImpl implements SurveyService{
         return surveyRepository.findByCategoryIdAndStatus(category_id, pageable);
     }
 
-
+    @Override
     public Page<Survey> getSurveyParticipateList(String title, String regId, Integer category_id, SurveyStatus status, PageRequestDTO requestDTO){
         Pageable pageable = requestDTO.getPageable(Sort.by("no").descending());
         Page<Survey> surveyTarget = surveyTargetRepository.findByTargetId(pageable,regId);
@@ -74,12 +74,12 @@ public class SurveyServiceImpl implements SurveyService{
         return surveyTarget;
     }
 
-    public Page<Map<String,Object>> getSurveyMakeList(String title, String regId, Integer category_id, SurveyStatus status, PageRequestDTO requestDTO){
-        Pageable pageable = requestDTO.getPageable(Sort.by("reg_dt").descending());
-        return surveyRepository.findByCategoryIdAndRegId(regId, pageable);
-//        return surveyRepositoryCustom.findByRegIdAndCategoryIdAndStatusAndTitle(title, regId, category_id, status, pageable);
-    }
 
+    @Override
+    public Page<Survey> getSurveyMakeList(String regId, Integer category_id, PageRequestDTO requestDTO){
+        Pageable pageable = requestDTO.getPageable(Sort.by("surId").descending());
+        return surveyRepository.findByCategoryIdAndRegId(category_id, regId, pageable);
+    }
 
     public Survey insertSurvey(SurveyDTO surveyDTO, String userId){
         SurveyCategory surveyCategory = surveyCategoryRepository.findBySurCatId(surveyDTO.getCategoryId());

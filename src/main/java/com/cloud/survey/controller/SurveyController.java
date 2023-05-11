@@ -89,20 +89,16 @@ public class SurveyController {
     // 설문 생성 리스트 조회
     @PreAuthorize("hasRole('ROLE_USER')")
     @RequestMapping(value = "/make_list", method = RequestMethod.GET)
-    public ResponseEntity<Page<Map<String,Object>>> getMakeList(
-                                            @RequestParam (value = "category_id", required = false) Integer categoryId,
-                                            @RequestParam (value = "status", required = false) SurveyStatus status,
-                                            @RequestParam (value = "title", required = false) String title,
+    public ResponseEntity<Page<Survey>> getMakeList(
+                                            @RequestParam (value = "categoryId", required = false) Integer categoryId,
                                             Principal principal, PageRequestDTO pageRequestDTO) {
 
         JwtAuthenticationToken token = (JwtAuthenticationToken) principal;
         String userId = token.getTokenAttributes().get("preferred_username").toString();
 
-//        List<Tuple> list =
-        Page<Map<String, Object>> list =
-                surveyService.getSurveyMakeList(title, userId, categoryId, status, pageRequestDTO);
-        return new ResponseEntity<>(list, HttpStatus.OK);
+        Page<Survey> list = surveyService.getSurveyMakeList(userId, categoryId, pageRequestDTO);
 
+        return new ResponseEntity<>(list, HttpStatus.OK);
     }
 
     // 설문 조사 생성
